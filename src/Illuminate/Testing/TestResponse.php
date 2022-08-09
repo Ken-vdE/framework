@@ -68,7 +68,7 @@ class TestResponse implements ArrayAccess
      * @param  \Illuminate\Http\Request  $request
      * @return void
      */
-    public function __construct($response, $request = null)
+    public function __construct($response, $request)
     {
         $this->baseResponse = $response;
         $this->request = $request;
@@ -82,7 +82,7 @@ class TestResponse implements ArrayAccess
      * @param  \Illuminate\Http\Request  $request
      * @return static
      */
-    public static function fromBaseResponse($response, $request = null)
+    public static function fromBaseResponse($response, $request)
     {
         return new static($response, $request);
     }
